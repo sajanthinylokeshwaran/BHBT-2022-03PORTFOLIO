@@ -1,0 +1,274 @@
+/* styles.css - Custom Styles for Portfolio */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Signika:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+/* Wave Animation */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+/* Smooth Edges for Images */
+.smooth-edges {
+  border-radius: 8px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark Mode Scrollbar */
+.dark::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+/* Navigation Underline Animation */
+.group span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  transition: max-width 0.5s ease;
+}
+
+/* Image Hover Effects */
+img {
+  transition: transform 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Card Rotation Effects */
+.hover\:rotate-0:hover {
+  transform: rotate(0deg) !important;
+}
+
+/* Form Input Focus */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  kerning: 2px;
+  lighting-color: #667eea;
+}
+
+/* Button Hover Effects */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu Toggle Animation */
+#menu {
+  overflow: hidden;
+  transition: height 0.5s ease-out;
+}
+
+#menu.open {
+  height: auto !important;
+}
+
+/* Mobile Menu Styling */
+@media (max-width: 768px) {
+  #ulMenu {
+    transition: opacity 0.3s ease, margin-top 0.3s ease;
+  }
+  
+  #menu:not(.open) #ulMenu {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #menu.open #ulMenu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Project Card Hover */
+.shadow-lg {
+  transition: all 0.3s ease;
+}
+
+.shadow-lg:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Links */
+footer a svg {
+  transition: transform 0.3s ease;
+}
+
+footer a:hover svg {
+  transform: scale(1.2);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Skill Bar Animation */
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+}
+
+.skill-bar {
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+/* Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode Transitions */
+.dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Print Styles */
+@media print {
+  nav,
+  footer,
+  button {
+    display: none;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus Visible */
+*:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #667eea;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #667eea;
+  color: white;
+}

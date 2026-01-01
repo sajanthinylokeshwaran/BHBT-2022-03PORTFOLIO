@@ -1,0 +1,26 @@
+{
+  "name": "bhbt-2022-03portfolio",
+  "version": "1.0.0",
+  "description": "MY PORTFOLIO",
+  "main": "fade_in.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajanthinylokeshwaran/BHBT-2022-03PORTFOLIO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sajanthinylokeshwaran/BHBT-2022-03PORTFOLIO/issues"
+  },
+  "homepage": "https://github.com/sajanthinylokeshwaran/BHBT-2022-03PORTFOLIO#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.18"
+  }
+}
